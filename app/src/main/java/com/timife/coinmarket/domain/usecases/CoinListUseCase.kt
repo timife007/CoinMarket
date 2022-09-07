@@ -23,7 +23,7 @@ class CoinListUseCase @Inject constructor(
             }catch (e:HttpException){
                 emit(Resource.Error(e.localizedMessage ?: "An unexpected error occurred"))
 
-            }catch (e:IOException){
+            }catch (e:IOException)){
                 emit(Resource.Error( "Couldn't reach server, check your internet connection"))
             }
         }
